@@ -1,13 +1,13 @@
 {
   "name": "generator-getdrupal",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Quick instalation of Drupal",
   "license": "MIT",
   "main": "app/index.js",
-  "repository": "MarioAraque/generator-drupal",
+  "repository": "MarioAraque/generator-getdrupal",
   "author": {
     "name": "Mario Araque",
-    "email": "",
+    "email": "mario.a.araque@gmail.com",
     "url": "https://github.com/MarioAraque"
   },
   "engines": {
