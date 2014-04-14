@@ -1,10 +1,13 @@
 {
   "name": "generator-getdrupal",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Quick instalation of Drupal",
   "license": "MIT",
   "main": "app/index.js",
-  "repository": "MarioAraque/generator-getdrupal",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/wesleytodd/generator-getdrupal.git"
+  },
   "author": {
     "name": "Mario Araque",
     "email": "mario.a.araque@gmail.com",
@@ -21,7 +24,9 @@
   ],
   "keywords": [
     "yeoman-generator",
-    "drupal"
+    "drupal",
+    "yeoman",
+    "generator"
   ],
   "dependencies": {
     "yeoman-generator": "~0.16.0",
