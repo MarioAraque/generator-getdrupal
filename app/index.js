@@ -3,13 +3,12 @@ var util = require('util');
 var path = require('path');
 var yeoman = require('yeoman-generator');
 var chalk = require('chalk');
-var drupal = require('../util/drupal');
 
 var DrupalGenerator = yeoman.generators.Base.extend({
   init: function () {
     this.on('end', function () {
       if (!this.options['skip-install']) {
-        drupal.getDrupal(this.drupalVersion);
+        this.getDrupal(this.drupalVersion);
       }
     });
   },
@@ -33,6 +32,23 @@ var DrupalGenerator = yeoman.generators.Base.extend({
 
       done();
     }.bind(this));
+  },
+
+  getDrupal: function (drupalVersion) {
+    if(!drupalVersion) return false;
+    var drupal6Repo = 'https://github.com/drupal/drupal.git -b 6.x',
+        drupal7Repo = 'https://github.com/drupal/drupal.git -b 7.x',
+        drupal8Repo = 'https://github.com/drupal/drupal.git -b 8.x';
+
+    console.log('Instaling Drupal '+drupalVersion+'. Please wait...');
+    require('simple-git')().clone('https://github.com/drupal/drupal.git -b '+drupalVersion+'.x', 'drupal', function(error){
+      if(error)
+        console.log('There was a problem in the instalation. Please try again.');
+      else
+        console.log('Installed Drupal succesfully, enjoy it!');
+    });
+
+    return false;
   }
 });
 
