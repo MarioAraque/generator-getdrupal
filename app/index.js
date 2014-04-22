@@ -22,7 +22,7 @@ var DrupalGenerator = yeoman.generators.Base.extend({
     var prompts = [{
       type: 'list',
       name: 'drupalVersion',
-      message: 'Would you like to enable this option?',
+      message: 'What version of Drupal would you like to install?',
       choices: ['6', '7', '8'],
       default: '7'
     }];
