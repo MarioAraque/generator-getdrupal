@@ -1,6 +1,6 @@
 {
   "name": "generator-getdrupal",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Quick instalation of Drupal",
   "license": "MIT",
   "main": "app/index.js",
