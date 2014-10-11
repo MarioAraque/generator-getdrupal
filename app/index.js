@@ -38,7 +38,7 @@ var DrupalGenerator = yeoman.generators.Base.extend({
     if(!drupalVersion) return false;
     var drupal6Repo = 'https://github.com/drupal/drupal.git -b 6.x',
         drupal7Repo = 'https://github.com/drupal/drupal.git -b 7.x',
-        drupal8Repo = 'https://github.com/drupal/drupal.git -b 8.x';
+        drupal8Repo = 'https://github.com/drupal/drupal.git -b 8.0.x';
 
     console.log('Instaling Drupal '+drupalVersion+'. Please wait...');
     require('simple-git')().clone('https://github.com/drupal/drupal.git -b '+drupalVersion+'.x', 'drupal', function(error){
